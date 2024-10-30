@@ -1,0 +1,451 @@
+/* Fuentes y estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    box-sizing: border-box; /* Añadir para asegurar el control de tamaño */
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 9rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-sizing: border-box; /* Evitar que se desborde */
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+
+/* Menú desplegable móvil */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+
+/* Hero section */
+.hero {
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+
+
+}
+
+.btn-primary:hover {
+    background-color: #0097a7;
+}
+
+/* Secciones */
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.equipo-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.equipo-card {
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.equipo-card:hover {
+    transform: scale(1.05);
+}
+
+.equipo-card img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.equipo-card h3 {
+    margin-top: 10px;
+    color: #004e92;
+}
+
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #00bcd4;
+    display: block;
+    margin: 10px auto 0;
+}
+
+/* Contenedor de tarjetas */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Tarjeta */
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn-secondary {
+    padding: 8px 16px;
+    background-color: #00bcd4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #0097a7;
+}
+
+/* Animaciones para las tarjetas */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Transiciones suaves */
+.card, .btn-primary, .btn-secondary {
+    transition: all 0.3s ease;
+}
+
+
+/* Section proyectos */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+
+/* Estilos para las tarjetas de categorías */
+.category-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+  }
+  
+  .category {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.63);
+  }
+  /* Línea blanca cuadrada */
+.category::before {
+    content: '';
+    position: absolute;
+    top: 10px; /* Ajusta el espacio desde el borde superior */
+    left: 10px; /* Ajusta el espacio desde el borde izquierdo */
+    right: 10px; /* Ajusta el espacio desde el borde derecho */
+    bottom: 10px; /* Ajusta el espacio desde el borde inferior */
+    border: 2px solid white; /* Grosor y color del borde */
+    border-radius: 8px; /* Ajusta para que coincida con el borde de la tarjeta */
+    pointer-events: none; /* Permite que el hover de la tarjeta funcione normalmente */
+  }
+  
+  .category:hover {
+    transform: scale(1.05);
+  }
+  
+  .category h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .category p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin: 5px 0 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Efecto de desplazamiento del título y opacidad en el párrafo */
+  .category:hover h3 {
+    transform: translateY(-10px);
+  }
+  
+  .category:hover p {
+    opacity: 1;
+  }
+
+
+
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto; /* Empuja el footer al fondo */
+
+}
+
+.social-links a {
+    margin: 0 20px;
+}
+
+.social-links img {
+    width: 30px;
+    height: auto; /* Asegura que las imágenes se mantengan en proporción */
+
+}
+
+/* Media Queries para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex; /* Asegurarse que aparezca el icono de hamburguesa */
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero{
+        padding: 0;
+    }
+
+    .section {
+        padding: 40px 10px;
+    }
+
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .card img {
+        height: 150px;
+    }
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px; /* Reduce el padding en pantallas más pequeñas */
+    }
+
+    .social-links a {
+        margin: 0 5px;
+    }
+
+    .social-links img {
+        width: 25px; /* Ajusta el tamaño de los iconos en pantallas pequeñas */
+    }
+}
+
+
+
+/* Media Queries para pantallas muy pequeñas (como celulares en modo retrato) */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .card img {
+        height: 120px;
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.8rem;
+    }
+
+    .social-links img {
+        width: 20px;
+    }
+}
+
+
